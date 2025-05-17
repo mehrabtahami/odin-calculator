@@ -1,0 +1,122 @@
+/* DARK
+bg ; 3a3a3a
+btn-bg :  3e3e3e
+itm-color : edbe35
+fnt-color ;  fefefe
+
+LIGHT
+bg ; f2f3f7
+fnt , itm-btn ; 131313
+shdw( L , D) ; f9fbfc , dfe3e6 */
+/* POPPINS FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --bg-color: #313131;
+  --font-color: #fefefe;
+  --main-font: "Poppins", sans-serif;
+  --pad-btn-bg: #3e3e3e;
+  --itm-color: #edbe35;
+  --pad-btn-hover: #313131;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  font-family: var(--main-font);
+}
+.container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-container {
+  width: 350px;
+  height: 650px;
+  border-radius: 40px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  /* box-shadow: 0px 1px 20px 6px #2c2c2ce8 inset; */
+  border: 1px solid #464646ee;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-container h1 {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+.display-container {
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 2.5rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: inherit;
+  margin-bottom: 10px;
+}
+
+.input-container button {
+  width: 70px;
+  height: 70px;
+  padding: 1.5rem;
+  border-radius: 50px;
+  background-color: var(--pad-btn-bg);
+  border: none;
+  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.input-container .numpad-buttons {
+  color: var(--font-color);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.input-container .operator-buttons {
+  color: var(--itm-color);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.input-container .equal-op-btn {
+  background-color: var(--itm-color);
+  color: var(--bg-color);
+}
+.input-container .equal-op-btn:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+.input-container button:hover {
+  background-color: var(--pad-btn-hover);
+  border: 1px solid var(--pad-btn-bg);
+}
