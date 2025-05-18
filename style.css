@@ -118,6 +118,7 @@ body {
 .input-container .equal-op-btn {
   background-color: var(--itm-color);
   color: var(--bg-color);
+  border-radius: 30px;
 }
 .input-container .equal-op-btn:hover {
   background-color: var(--font-color);
@@ -125,5 +126,6 @@ body {
 }
 .input-container button:hover {
   background-color: var(--pad-btn-hover);
-  border: 1px solid var(--pad-btn-bg);
+  border: 2px solid var(--pad-btn-bg);
+  border-radius: 30px;
 }
