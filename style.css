@@ -20,7 +20,7 @@ shdw( L , D) ; f9fbfc , dfe3e6 */
 }
 
 :root {
-  font-size: 16px;
+  font-size: 28px;
   --bg-color: #313131;
   --font-color: #fefefe;
   --main-font: "Poppins", sans-serif;
@@ -50,14 +50,14 @@ body {
 }
 
 .calc-container {
-  width: 350px;
-  height: 650px;
+  width: 600px;
+  height: 920px;
   border-radius: 40px;
-  display: flex;
+  display: none;
   overflow: hidden;
   flex-direction: column;
   padding: 1rem 1.5rem;
-  /* box-shadow: 0px 1px 20px 6px #2c2c2ce8 inset; */
+  box-shadow: 0px 1px 20px 6px #2c2c2ce8;
   border: 1px solid #464646ee;
 }
 .nav-container {
@@ -78,7 +78,7 @@ body {
   font-size: 2.5rem;
 }
 .display-container .previous-entry {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #808080;
   margin-bottom: 10px;
   visibility: hidden;
@@ -89,18 +89,24 @@ body {
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: inherit;
-  margin-bottom: 10px;
+  height: 550px;
 }
 
 .input-container button {
-  width: 70px;
-  height: 70px;
-  padding: 1.5rem;
-  border-radius: 50px;
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
   background-color: var(--pad-btn-bg);
   border: none;
   transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-bottom: 0.6rem;
+}
+
+.input-container button:nth-child(20),
+.input-container button:nth-child(19),
+.input-container button:nth-child(18),
+.input-container button:nth-child(17) {
+  margin-bottom: 0.3rem;
 }
 
 .input-container .numpad-buttons {
@@ -128,4 +134,37 @@ body {
   background-color: var(--pad-btn-hover);
   border: 2px solid var(--pad-btn-bg);
   border-radius: 30px;
+}
+
+/* OPEN  CALC BUTTON */
+.open-calc-btn {
+  padding: 1rem;
+  box-shadow: 0px 1px 20px 6px #2c2c2ce8 inset;
+  border: 1px solid #464646ee;
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+  color: var(--font-color);
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.open-calc-btn:hover {
+  border-radius: 0.5rem;
+  background-color: var(--pad-btn-bg);
+  color: var(--itm-color);
+  box-shadow: none;
+}
+
+.close-calc-btn {
+  color: var(--itm-color);
+}
+
+.close-calc-btn:hover {
+  background-color: #3e3e3e;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }

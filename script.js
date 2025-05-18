@@ -199,3 +199,16 @@ decimalOperator.addEventListener("click", () => {
     outputLabel.textContent += ".";
   }
 });
+
+// **** OPEN AND CLOSE CALC BUTTONS
+const openCalcBtn = document.querySelector(".open-calc-btn");
+const closeCalcBtn = document.querySelector(".close-calc-btn");
+const calculator = document.querySelector(".calc-container");
+openCalcBtn.addEventListener("click", () => {
+  calculator.style.display = "flex";
+  openCalcBtn.style.display = "none";
+});
+closeCalcBtn.addEventListener("click", () => {
+  calculator.style.display = "none";
+  openCalcBtn.style.display = "block";
+});
